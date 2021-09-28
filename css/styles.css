@@ -11537,7 +11537,7 @@ footer a:hover, footer a:active, footer a:focus {
   height: 50vh;
 }
 .nomuBg{
-  background-image: url("/assets/img/nomuBg2.jpg");
+  background-image: url("../assets/img/nomuBg2.jpg");
 /* Location of the image */
 /* Background image is centered vertically and horizontally at all times */
 background-position: bottom center;
