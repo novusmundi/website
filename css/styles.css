@@ -11542,7 +11542,7 @@ footer a:hover, footer a:active, footer a:focus {
   -webkit-mask-image:-webkit-gradient(linear, left top, left bottom,rgba(0,0,0,0), rgba(0,0,0,1),rgba(0,0,0,0));
 }
 .nomuBg{
-  background-image: url("../assets/img/nomuBg.png");
+  background-image: url("../assets/img/nomuBg2.jpg");
 /* Location of the image */
 /* Background image is centered vertically and horizontally at all times */
 background-position: bottom center;
