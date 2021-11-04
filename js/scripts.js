@@ -38,7 +38,7 @@ function validateAndSendform(){
     const valid = RegExp( /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(email)
     const alert = document.getElementById("alert")
     if(valid){
-        axios.post("https://trib3.app/newsletter",{email:email}).then((response) => {
+        axios.post("https://localhost/newsletter",{email:email}).then((response) => {
             
             if(response && response.data){
                 console.log(response.data)
