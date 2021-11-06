@@ -11,7 +11,7 @@ let _places = [
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '?';
-    renderPlaces(_places);
+    getCurrentLocation()
 };
 
 function staticLoadPlaces() {
@@ -37,7 +37,7 @@ function getCurrentLocation(){
         alert('ERROR(' + err.code + '): ' + err.message);
       };
       
-      //navigator.geolocation.getCurrentPosition(includePlace, error, options);
+      navigator.geolocation.getCurrentPosition(includePlace, error, options);
       
 }
 function includePlace(pos){
