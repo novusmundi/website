@@ -41,6 +41,7 @@ function getCurrentLocation(){
       
 }
 function includePlace(pos){
+    console.log(pos)
     const crd = pos.coords;
     const place = {
         name:"Pokemon",
