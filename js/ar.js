@@ -2,8 +2,8 @@ let _places = [
     {
         name: 'Pokemon',
         location: {
-            lat: 40.4815624,
-            lng: -3.6688096
+            lat:40.481619,
+            lng:-3.668615
         },
     }
 ]
@@ -37,7 +37,7 @@ function getCurrentLocation(){
         alert('ERROR(' + err.code + '): ' + err.message);
       };
       
-      navigator.geolocation.getCurrentPosition(includePlace, error, options);
+      //navigator.geolocation.getCurrentPosition(includePlace, error, options);
       
 }
 function includePlace(pos){
