@@ -11727,3 +11727,9 @@ button {
     color: white;
     z-index: 999999;
 }
+.aboveAll{
+  position: fixed;
+  top:10vh;
+  left: 90vw;
+  z-index: 1000;
+}
