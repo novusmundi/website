@@ -1,11 +1,5 @@
 let _places = [
-    {
-        name: 'Pokemon',
-        location: {
-            lat:40.481619,
-            lng:-3.668615
-        },
-    }
+
 ]
 
 window.onload = () => {
