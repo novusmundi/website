@@ -1,9 +1,17 @@
+let _places = [
+    {
+        name: 'Pokemon',
+        location: {
+            lat: 40.4815624,
+            lng: -3.6688096
+        },
+    }
+]
+
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '?';
-
-    let places = staticLoadPlaces();
-    renderPlaces(places);
+    renderPlaces(_places);
 };
 
 function staticLoadPlaces() {
@@ -16,6 +24,31 @@ function staticLoadPlaces() {
             },
         },
     ];
+}
+function getCurrentLocation(){
+    var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      };
+      
+      
+      function error(err) {
+        alert('ERROR(' + err.code + '): ' + err.message);
+      };
+      
+      navigator.geolocation.getCurrentPosition(includePlace, error, options);
+      
+}
+function includePlace(pos){
+    const crd = pos.coords;
+    const place = {
+        name:"Pokemon",
+        location:crd
+    }
+    _places.push(place)
+    renderPlaces(_places)
+
 }
 
 var models = [
