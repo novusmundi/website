@@ -11728,9 +11728,9 @@ button {
     z-index: 999999;
 }
 .aboveAll{
-  position: fixed;
-  top:10vh;
-  left: 90vw;
+  position: absolute;
+  top:10%;
+  left: 50%;
   z-index: 999999;
 }
 .customButton{
