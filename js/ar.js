@@ -53,7 +53,10 @@ function includePlace(pos){
     const crd = pos.coords;
     const place = {
         name:"Pokemon",
-        location:crd
+        location:{
+            lat:crd.latitude,
+            lng:crd.longitude
+        }
     }
     _places.push(place)
     renderPlaces()
