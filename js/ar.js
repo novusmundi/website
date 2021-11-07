@@ -5,8 +5,9 @@ let _places = [
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
     button.innerText = '?';
-    getCurrentLocation()
 };
+
+document.body.addEventListener("click", getCurrentLocation)
 
 function staticLoadPlaces() {
     return [
@@ -42,7 +43,7 @@ function includePlace(pos){
         location:crd
     }
     _places.push(place)
-    renderPlaces(_places)
+    renderPlaces()
 
 }
 
@@ -87,10 +88,10 @@ var setModel = function (model, entity) {
     div.innerText = model.info;
 };
 
-function renderPlaces(places) {
+function renderPlaces() {
     let scene = document.querySelector('a-scene');
 
-    places.forEach((place) => {
+    _places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
