@@ -11737,4 +11737,14 @@ button {
   border-radius: 50%;
   background: #ffffff!important;
   color: #000!important;
+  padding: 5%;
+}
+.buttons{
+  position: fixed;
+  bottom: 10px;
+  width:100%;
+  text-align: center;
+  z-index: 1;
+  color: grey;
+
 }

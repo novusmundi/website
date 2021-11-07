@@ -12,11 +12,10 @@
             THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
         </script>
         <script src="./js/ar.js"></script>
-        <link rel="stylesheet" type="text/css" href="./style/style.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
     </head>
 
     <body style='margin: 0; overflow: hidden;'>
-
         <div class="centered instructions"></div>
         <a-scene 
             vr-mode-ui='enabled: false' 
@@ -25,7 +24,7 @@
         <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
     <div class="centered">
-        <button data-action="change"></button>
+        <button  class="customButton">+</button>
     </div>
     </body>
 </html>

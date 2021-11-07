@@ -2,12 +2,17 @@ let _places = [
 
 ]
 
-window.onload = () => {
-    const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '?';
-};
+window.onload = function () {
+    document
+      .querySelector(".customButton")
+      .addEventListener("click", function () {
+        // here you can change also a-scene or a-entity properties, like
+        // changing your 3D model source, size, position and so on
+        // or you can just open links, trigger actions...
+       getCurrentLocation()
+      });
+  };
 
-document.body.addEventListener("click", getCurrentLocation)
 
 function staticLoadPlaces() {
     return [
@@ -31,7 +36,7 @@ function getCurrentLocation(){
       function error(err) {
         alert('ERROR(' + err.code + '): ' + err.message);
       };
-      
+      console.log("Click")
       navigator.geolocation.getCurrentPosition(includePlace, error, options);
       
 }
@@ -101,14 +106,6 @@ function renderPlaces() {
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
-
-        document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-            var entity = document.querySelector('[gps-entity-place]');
-            modelIndex++;
-            var newIndex = modelIndex % models.length;
-            setModel(models[newIndex], entity);
-        });
-
         scene.appendChild(model);
     });
 }
