@@ -17,6 +17,8 @@ window.onload = function () {
         // or you can just open links, trigger actions...
        getCurrentLocation()
       });
+      renderPlaces()
+
   };
 
 
