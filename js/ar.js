@@ -1,5 +1,11 @@
 let _places = [
-
+    {
+        name: 'Pokemon',
+        location: {
+            lat: 40.4815624,
+            lng: -3.6688096
+        },
+    },
 ]
 
 window.onload = function () {
@@ -54,19 +60,19 @@ function includePlace(pos){
 
 var models = [
     {
-        url: '../assets/magnemite/scene.gltf',
+        url: '/assets/magnemite/scene.gltf',
         scale: '0.5 0.5 0.5',
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
     },
     {
-        url: '../assets/articuno/scene.gltf',
+        url: '/assets/articuno/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
     },
     {
-        url: '../assets/dragonite/scene.gltf',
+        url: '/assets/dragonite/scene.gltf',
         scale: '0.08 0.08 0.08',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
@@ -98,6 +104,7 @@ function renderPlaces() {
     _places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
+        console.log(place.location)
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
