@@ -73,7 +73,6 @@ var models = [
     },
 ];
 
-var modelIndex = 0;
 var setModel = function (model, entity) {
     if (model.scale) {
         entity.setAttribute('scale', model.scale);
@@ -102,10 +101,15 @@ function renderPlaces() {
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-
+        const modelIndex = getRandomInt(0,2)
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
         scene.appendChild(model);
     });
 }
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  
