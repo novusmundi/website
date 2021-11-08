@@ -1,12 +1,41 @@
 let _places = [
     {
-        name: 'Pokemon',
-        location: {
-            lat: 40.4815624,
-            lng: -3.6688096
-        },
+        name: 'Pokemon1',
+        location: {lat:40.48183401018869, lng: -3.6683821678161626 }
+
+    },
+    {
+        name: 'Pokemon2',
+        location:  { lat: 40.48175240534186, lng: -3.6685055494308476 }
+
+    },
+    {
+        name: 'Pokemon3',
+        location:  { lat: 40.48167488064544, lng: -3.668650388717652 }
+    },
+
+    {
+        name: 'Pokemon4',
+        location:  { lat: 40.481601436113635, lng: -3.6689025163650517 }
+
+    },
+    {
+        name: 'Pokemon5',
+        location:  { lat: 40.48155247304777, lng: -3.6692458391189575 }
+
+    },
+    {
+        name: 'Pokemon6',
+        location:  { lat: 40.48140558363597, lng: -3.6689507961273193 }
+
     },
 ]
+
+
+
+
+
+
 
 window.onload = function () {
     document
@@ -15,7 +44,7 @@ window.onload = function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-       getCurrentLocation()
+       //getCurrentLocation()
       });
       renderPlaces()
 
