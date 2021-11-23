@@ -12,7 +12,7 @@ let _places = [
 
 
 
-
+console.log("New version")
 
 
 window.onload = function () {
