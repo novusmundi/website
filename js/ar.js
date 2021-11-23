@@ -1,34 +1,12 @@
 let _places = [
     {
         name: 'Pokemon1',
-        location: {lat:40.48183401018869, lng: -3.6683821678161626 }
+        location: {
+            "lat": 40.416939103017825,
+            "lng": -3.6730223894119267
+          }
 
-    },
-    {
-        name: 'Pokemon2',
-        location:  { lat: 40.48175240534186, lng: -3.6685055494308476 }
-
-    },
-    {
-        name: 'Pokemon3',
-        location:  { lat: 40.48167488064544, lng: -3.668650388717652 }
-    },
-
-    {
-        name: 'Pokemon4',
-        location:  { lat: 40.481601436113635, lng: -3.6689025163650517 }
-
-    },
-    {
-        name: 'Pokemon5',
-        location:  { lat: 40.48155247304777, lng: -3.6692458391189575 }
-
-    },
-    {
-        name: 'Pokemon6',
-        location:  { lat: 40.48140558363597, lng: -3.6689507961273193 }
-
-    },
+    }
 ]
 
 
@@ -142,7 +120,7 @@ function renderPlaces() {
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        const modelIndex = getRandomInt(0,2)
+        const modelIndex = 0
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
