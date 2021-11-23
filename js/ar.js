@@ -70,7 +70,13 @@ function includePlace(pos){
 
 }
 
-var models = [
+var     models = [
+    {
+        url: '/assets/nomulogo.gltf',
+        scale: '0.5 0.5 0.5',
+        info: 'Magnemite, Lv. 5, HP 10/10',
+        rotation: '0 180 0',
+    },
     {
         url: '/assets/magnemite/scene.gltf',
         scale: '0.5 0.5 0.5',
@@ -86,7 +92,7 @@ var models = [
     {
         url: '/assets/dragonite/scene.gltf',
         scale: '0.08 0.08 0.08',
-        rotation: '0 180 0',
+        rotation: '0 0 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
     },
 ];
@@ -120,7 +126,7 @@ function renderPlaces() {
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        const modelIndex = 2
+        const modelIndex = 0
         setModel(models[modelIndex], model);
 
         model.setAttribute('animation-mixer', '');
