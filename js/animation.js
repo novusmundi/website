@@ -203,12 +203,12 @@ function runAnimation(){
 
     const diff = Math.abs(currentPos - sb)
 
-    if(diff >= segment && currentScene + 1 <= scenes.length ){
+    if(diff >= segment + 1){
       if(animationOn === false){
         lockScroll()
         hideText()
         showText()
-        if(sb > currentPos){
+        if(sb > currentPos  && currentScene + 1 <= scenes.length ){
           nextScene++
           await forwardScene();
           currentScene = nextScene;

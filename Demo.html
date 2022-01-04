@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAR SDK Basic Scene</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="js/blippar/webar-sdk-v1.1.0-beta.min.js"></script>
 
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Nomu demo</title>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    
-        <script src="./js/ar.js"></script>
-        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
-    </head>
-
-    <body style='margin: 0; overflow: hidden;'>
-        <div class="centered instructions"></div>
-        <a-scene 
-            vr-mode-ui='enabled: false' 
-            embedded
-            
-            arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-camera gps-camera rotation-reader></a-camera>
-    </a-scene>
-    <div class="centered">
-        <button  class="customButton">+</button>
-    </div>
-    </body>
+</head>
+<body>
+    <a-scene
+    webar-scene="key: 50df71e4-98c2-49c9-853f-c5c6bf3846e2"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+    loading-screen="enabled: false">
+    <a-camera webar-camera></a-camera>
+    <a-assets>    
+        <a-asset-item
+        id="astronaut"
+        src="../assets/nomulogo.gltf">
+    </a-asset-item>
+    </a-assets>    
+    <a-entity webar-stage>
+        <!-- Place 3D AR models here -->
+        <a-entity gltf-model="#astronaut" id="astronaut_1" 
+                  rotation="0 0 0" position="0 0 0" scale="0.25 0.25 0.25"
+                  webar-loadmonitor="elType: gltf"></a-entity>
+    </a-entity>
+  </a-scene>
+</body>
 </html>
