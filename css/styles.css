@@ -77,7 +77,6 @@
 
 body {
   margin: 0;
-  height: 500vh;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -87,6 +86,9 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.largeScreen{
+  height: 500vh!important;
 }
 
 hr {
@@ -11531,11 +11533,9 @@ footer a:hover, footer a:active, footer a:focus {
 }
 .masthead {
   background-color: #000000;
-
-}
-.fullScreen{
+large{
   width: 100%;
-  max-width: 100%!important;
+  max-width!important: 100%!important;
   height: 100vh;
 }
 
