@@ -228,5 +228,5 @@ function runAnimation(){
 }
 
 calculateRanges()
-
+preloadImages()
 runAnimation()
