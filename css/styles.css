@@ -11789,3 +11789,7 @@ button {
   height: 100vh!important;
   max-height: 100%;
 }
+
+.blackBg{
+  background-color: #000!important;
+}
